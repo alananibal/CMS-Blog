@@ -1,16 +1,22 @@
- 
-  <div class="container">
-    {{#each this}}
-    
-    <section class="">
-      <div >
-       {{user.email}} on {{format_date created_at}}
-      </div>
+<div class="container">
+   
+  <div class="comments">
       
-      <div class=" ">
-        {{comment_text}}
-      </div>
-    
-    </section>
-    {{/each}}
+        {{#each this}}
+        
+        <section class="comment p-2">
+            <br>
+          <div class="blockquote mb-4" >
+            {{comment_text}}
+          </div>
+        
+          <div class="blockquote-footer">
+           commented by {{user.email}} on {{format_date created_at}}
+          </div>
+              
+        
+        </section>
+        {{/each}}
+      
   </div>
+</div>
